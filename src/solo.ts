@@ -6,6 +6,11 @@ import {
 } from "../generated/SoloMargin/SoloMargin";
 import { Index, Market, Buy, Sell, Expiry } from "../generated/schema";
 
+export function handleLogTrade(event: LogTrade): void {
+  let entity = new Trade(event.transaction.hash.toHex() + "-" + event.logIndex.toString());
+}
+
+
 export function handleLogIndexUpdate(event: LogIndexUpdate): void {
   let entity = new Index(event.params.market.toString());
   entity.market = event.params.market;
