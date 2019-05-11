@@ -2,6 +2,7 @@ import {
   LogIndexUpdate,
   LogAddMarket,
   LogBuy,
+  LogTrade,
   LogSell
 } from "../generated/SoloMargin/SoloMargin";
 import { Index, Market, Buy, Sell, Expiry } from "../generated/schema";
